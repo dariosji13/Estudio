@@ -9,7 +9,7 @@ public class TestClasesAbstratas {
 		//FiguraGeometrica figura= new FiguraGeometrica;
 		// no se puede crear obletos de la clase padre poque esta marcada como abstrata
 		
-		Rectangulo figura = new Rectangulo("Rectangulo");
+		FifuraGeometrica figura = new Rectangulo("Rectangulo");
 		figura.dibujar();
 
 	}

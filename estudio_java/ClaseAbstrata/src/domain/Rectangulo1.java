@@ -2,7 +2,7 @@ package domain;
 
 public class Rectangulo extends FifuraGeometrica{
 	
-	public Rectangulo (String tipoFigura) {
+	public Rectangulo1 (String tipoFigura) {
 		super(tipoFigura);
 	}
 	public Rectangulo(String tipoFigura) {
