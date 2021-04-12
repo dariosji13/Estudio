@@ -6,7 +6,7 @@ import acessoDatos.*;
 public class TestInterfaces {
 
 	public static void main(String[] args) {
-		//IAccesoDatos datos= new IAccesoDatos(); no se puede crear objetos a
+		//IAccesoDatos datos= new IAccesoDatos(); //no se puede crear objetos de unaminterface
 		//diferencia de las clases hijas, padres y la abstrata
 		IAccesoDatos datos= new ImplementacionMySqi();
 		//datos.listar();
@@ -18,6 +18,9 @@ public class TestInterfaces {
 	
 	public static void imprimir(IAccesoDatos datos) {
 		datos.listar();
+		datos.eliminar();
+		datos.actualizar();
+		datos.insertar();
 	}
 
 	}

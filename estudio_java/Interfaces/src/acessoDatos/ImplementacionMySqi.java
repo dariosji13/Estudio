@@ -16,7 +16,7 @@ public class ImplementacionMySqi implements IAccesoDatos{
 
 	@Override
 	public void actualizar() {
-		System.out.println("ActualiR desde Mysql");
+		System.out.println("Actualizar desde Mysql");
 		
 	}
 
