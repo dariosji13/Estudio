@@ -3,9 +3,9 @@ package domain;
 
 
 public class Pista extends Juego{
-   protected int idPista;
+   private int idPista;
    
-   protected double largoPistaMetros;
+   private double largoPistaMetros;
 
     public Pista() {
     }
@@ -13,9 +13,7 @@ public class Pista extends Juego{
 
     public Pista(int idPista, double largoPistaKilometros) {
         this.idPista = idPista;
-        this.largoPistaMetros = convetirKilometrosEnMetros(largoPistaKilometros);
-        
-        
+        this.largoPistaMetros = convetirKilometrosEnMetros(largoPistaKilometros);    
                
     }
 
@@ -34,6 +32,15 @@ public class Pista extends Juego{
     public void setLargoPistaMetros(double largoPistaMetros) {
         this.largoPistaMetros = largoPistaMetros;
     }
+    
+    
+
+    @Override
+    public String toString() {
+        return "Pista{" + "idPista=" + idPista + ", largoPistaMetros=" + largoPistaMetros + '}';
+    }
+    
+    
    
     /**
         * Retorna la longuitud en metros de un valor double en kilometos
