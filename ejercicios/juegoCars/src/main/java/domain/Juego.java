@@ -11,9 +11,10 @@ public class Juego {
     public Juego() {
     }
 
-    public Juego(int numeroJugadores) {
-        this.numeroJugadores = numeroJugadores;
+    public Juego(int idJuego) {
+        this.idJuego = idJuego;
     }
+
 
     public Juego(int idJuego, int numeroJugadores) {
         this.idJuego = idJuego;

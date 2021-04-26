@@ -2,19 +2,20 @@
 package domain;
 
 
-public class Pista extends Juego{
+public class Pista {
    private int idPista;
    
    private double largoPistaMetros;
+   
+   private double largoPistaKilometros;
 
     public Pista() {
     }
-    
 
     public Pista(int idPista, double largoPistaKilometros) {
         this.idPista = idPista;
-        this.largoPistaMetros = convetirKilometrosEnMetros(largoPistaKilometros);    
-               
+        this.largoPistaKilometros = largoPistaKilometros;
+        this.largoPistaMetros = convetirKilometrosEnMetros(largoPistaKilometros);
     }
 
     public int getIdPista() {
@@ -32,23 +33,29 @@ public class Pista extends Juego{
     public void setLargoPistaMetros(double largoPistaMetros) {
         this.largoPistaMetros = largoPistaMetros;
     }
-    
-    
 
-    @Override
-    public String toString() {
-        return "Pista{" + "idPista=" + idPista + ", largoPistaMetros=" + largoPistaMetros + '}';
+    public double getLargoPistaKilometros() {
+        return largoPistaKilometros;
+    }
+
+    public void setLargoPistaKilometros(double largoPistaKilometros) {
+        this.largoPistaKilometros = largoPistaKilometros;
     }
     
-    
+     
    
     /**
         * Retorna la longuitud en metros de un valor double en kilometos
         */  
-  public double convetirKilometrosEnMetros(double largoPista){
+  public double convetirKilometrosEnMetros(double largoPistaKilometros){
       
-       return largoPista*1000;
+       return largoPistaKilometros*1000;
    }
+
+    @Override
+    public String toString() {
+        return "Pista{" + "idPista=" + idPista + ", largoPistaMetros=" + largoPistaMetros + ", largoPistaKilometros=" + largoPistaKilometros + '}';
+    }
    
     
    

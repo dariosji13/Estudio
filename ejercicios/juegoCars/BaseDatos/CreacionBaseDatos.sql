@@ -27,8 +27,21 @@ CREATE TABLE IF NOT EXISTS judadores (
 DROP TABLE IF EXISTS pista;
 CREATE TABLE IF NOT EXISTS pista (
          id_pista INT NOT NULL AUTO_INCREMENT,
-         largo_pista INT NOT NULL,
+         largo_pistaMetros INT NOT NULL,
+         carril INT NOT NULL;
          CONSTRAINT pista PRIMARY KEY (id_pista)
+);
+DROP TABLE IF EXISTS conductor;
+CREATE TABLE IF NOT EXISTS conductor(
+         id_conductor INT NOT NULL AUTO_INCREMENT,
+         CONSTRAINT conductor PRIMARY KEY (id_conductor)
+);
+DROP TABLE IF EXISTS carro;
+CREATE TABLE IF NOT EXISTS carro (
+         id_carro INT NOT NULL AUTO_INCREMENT,
+         color_carro varchar(40) NOT NULL,
+         CONSTRAINT judadores PRIMARY KEY (id_carro)
+
 );
 
 
