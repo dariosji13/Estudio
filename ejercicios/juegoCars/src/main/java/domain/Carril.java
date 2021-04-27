@@ -10,6 +10,11 @@ public class Carril extends Pista{
     
     private double distanciaFaltante;
 
+    public Carril() {
+    }
+    
+    
+
     public Carril(int idCarril, double distanciaAvanada, double distanciaFaltante) {
         this.idCarril = idCarril;
         this.distanciaAvanada = distanciaAvanada;
