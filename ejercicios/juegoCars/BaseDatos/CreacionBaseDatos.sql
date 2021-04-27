@@ -11,38 +11,34 @@
 DROP SCHEMA IF EXISTS juego_cars;          
 CREATE SCHEMA IF NOT EXISTS juego_cars;
 USE juego_cars;
+DROP TABLE IF EXISTS jugadores;
+CREATE TABLE IF NOT EXISTS jugadores (
+         id_jugador INT NOT NULL AUTO_INCREMENT,
+         nombre_jugador varchar(40) NOT NULL, 
+         color_carro varchar (40) NOT NULL,
+         PRIMARY KEY (id_jugador,nombre_jugador ),
+         UNIQUE (nombre_jugador)
+);
 DROP TABLE IF EXISTS historia_podio;
 CREATE TABLE IF NOT EXISTS historia_podio (
 	id_juego INT NOT NULL AUTO_INCREMENT,
 	nombre_jugador varchar(40) NOT NULL,
 	cantidad_de_ganados INT NOT NULL,
-	CONSTRAINT historia_podio PRIMARY KEY (id_juego)
-);
-DROP TABLE IF EXISTS judadores;
-CREATE TABLE IF NOT EXISTS judadores (
-         id_jugador INT NOT NULL AUTO_INCREMENT,
-         nombre_jugador varchar(40) NOT NULL,
-         CONSTRAINT judadores PRIMARY KEY (id_jugador)
+        PRIMARY KEY (id_juego),
+        CONSTRAINT FOREIGN KEY  (nombre_jugador) REFERENCES jugadores (nombre_jugador) 
 );
 DROP TABLE IF EXISTS pista;
 CREATE TABLE IF NOT EXISTS pista (
-         id_pista INT NOT NULL AUTO_INCREMENT,
-         largo_pistaMetros INT NOT NULL,
-         carril INT NOT NULL;
-         CONSTRAINT pista PRIMARY KEY (id_pista)
+	nombre_jugador varchar(40) NOT NULL,
+        carril INT NOT NULL,
+        lardo_Pista_Metros DOUBLE NOT NULL,
+        distancia_avanzada_metros DOUBLE NOT NULL,
+        distancia_faltante_metros DOUBLE NOT NULL,
+        PRIMARY KEY (nombre_jugador),
+	CONSTRAINT FOREIGN KEY  (nombre_jugador) REFERENCES jugadores (nombre_jugador) 
 );
-DROP TABLE IF EXISTS conductor;
-CREATE TABLE IF NOT EXISTS conductor(
-         id_conductor INT NOT NULL AUTO_INCREMENT,
-         CONSTRAINT conductor PRIMARY KEY (id_conductor)
-);
-DROP TABLE IF EXISTS carro;
-CREATE TABLE IF NOT EXISTS carro (
-         id_carro INT NOT NULL AUTO_INCREMENT,
-         color_carro varchar(40) NOT NULL,
-         CONSTRAINT judadores PRIMARY KEY (id_carro)
 
-);
+
 
 
 
