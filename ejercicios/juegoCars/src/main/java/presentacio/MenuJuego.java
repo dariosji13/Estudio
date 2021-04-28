@@ -48,8 +48,8 @@ public class MenuJuego {
     }
     
     
-    public void mesajeTurnoJugador(){
-        System.out.println(OpcionesJuegoEnum.MENSAJE_TUNO_JUGADOR.getMensaje()); 
+    public void mesajeTurnoJugador(String nombreJugador){
+        System.out.println(OpcionesJuegoEnum.MENSAJE_TUNO_JUGADOR.getMensaje()+ " "+ nombreJugador); 
     }
     
     

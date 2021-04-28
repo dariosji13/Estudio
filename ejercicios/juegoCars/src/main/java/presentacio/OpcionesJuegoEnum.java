@@ -19,7 +19,7 @@ public enum OpcionesJuegoEnum {
     MENSAJE_LARGO_PISTA("Ingrese el largo de la pista en Kilometros: "),
     MENSAJE_NOMBRE_JUGADOR("Ingrese el nombre del jugador:"),
     MENSAJE_COLOR_CARRO("Ingrese el color del carro: "),
-    MENSAJE_TUNO_JUGADOR("Es el turno del jugadora: "),
+    MENSAJE_TUNO_JUGADOR("Es el turno del jugador: "),
     MENSAJE_VALOR_DE_DADOS("Ingrese el valor del dado: "),
     MENSAJE_AVANCE("Avanzaste: "),
     MENSAJE_FALTA_PARA_LA_META("Queda faltando para llegar a la meta: "); 

@@ -6,7 +6,7 @@ public class Carril extends Pista{
     
     private int idCarril;
     
-    private double distanciaAvanada;
+    private double distanciaAvanada = 0;
     
     private double distanciaFaltante;
 
@@ -22,8 +22,8 @@ public class Carril extends Pista{
         
     }
 
-    public Carril(int idCarril, double distanciaAvanada, double distanciaFaltante, int idPista, double largoPistaKilometros) {
-        super(idPista, largoPistaKilometros);
+    public Carril(int idCarril, double distanciaAvanada, double distanciaFaltante, int idPista, double largoPistakilometros) {
+        super(idPista, largoPistakilometros);
         this.idCarril = idCarril;
         this.distanciaAvanada = distanciaAvanada;
         this.distanciaFaltante = distanciaFaltante;
@@ -47,7 +47,7 @@ public class Carril extends Pista{
     }
 
     public double getDistanciaFaltante() {
-        return distanciaFaltante;
+        return this.distanciaFaltante;
     }
 
     public void setDistanciaFaltante(double distanciaFaltante) {
@@ -59,14 +59,10 @@ public class Carril extends Pista{
     */
 
     public double avanceEnMetros(int valorDados){
-        return (double)valorDados*100;
+        return this.distanciaAvanada+=(double)valorDados*100;
     }
     
-    
-    @Override
-    public String toString() {
-        return "Carril{" + "idCarril=" + idCarril + ", distanciaAvanada=" + distanciaAvanada + ", distanciaFaltante=" + distanciaFaltante + '}';
-    }
+
     
     
 }
