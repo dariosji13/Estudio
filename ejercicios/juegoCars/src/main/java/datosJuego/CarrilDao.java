@@ -14,13 +14,17 @@ public class CarrilDao implements IConexion{
     private static final String SQL_UPDATE = "UPDATE juego_cars.carril SET  telefono=? WHERE id_carril=? ";
     private static final String SQL_DELETE = "DELETE FROM juego_cars.carril WHERE id_persona=?";
 
-    @Override
-    public List<Juego> seleccionar() {
-        Connection c=null;
-        PreparedStatement ps=null;
-        ResultSet rs= null;
-        List<Carril> carriles =new ArrayList<>();
-       
+//    @Override
+//    public List<Juego> seleccionar() {
+//        Connection c=null;
+//        PreparedStatement ps=null;
+//        ResultSet rs= null;
+//        List<Carril> carriles =new ArrayList<>();
+//       
+//    }
+     @Override
+    public void seleccionar() {
+        
     }
 
     @Override

@@ -17,6 +17,8 @@ public class Podio extends Juego{
     public Podio() {
     }
     
+    
+    
     public Podio(int idPodio, String primero, String segungo, String tercero, int idJuego) {
         super(idJuego);
         this.idPodio = idPodio;
@@ -31,6 +33,7 @@ public class Podio extends Juego{
         this.segungo = segungo;
         this.tercero = tercero;
     }
+    
 
     public int getIdPodio() {
         return idPodio;

@@ -1,18 +1,17 @@
 
-package domain;
+package presentacio;
+
+import domain.Carril;
+import domain.Carro;
+import domain.Conductor;
 
 public class Escuderia {
     Conductor conductor;
     Carril carril;
     Carro carro;
+    boolean finalizo= false;
 
     public Escuderia() {
-    }
-
-    public Escuderia(Conductor conductor, Carril carril, Carro carro) {
-        this.conductor = conductor;
-        this.carril = carril;
-        this.carro = carro;
     }
 
     public Conductor getConductor() {
@@ -39,6 +38,21 @@ public class Escuderia {
         this.carro = carro;
     }
 
+    public boolean isFinalizo() {
+        return finalizo;
+    }
+
+    public void setFinalizo(boolean finalizo) {
+        this.finalizo = finalizo;
+    }
+
+    public Escuderia(Conductor conductor, Carril carril, Carro carro) {
+        this.conductor = conductor;
+        this.carril = carril;
+        this.carro = carro;
+    }
+
+  
   
     
     

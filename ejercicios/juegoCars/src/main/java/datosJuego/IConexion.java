@@ -6,8 +6,8 @@ import java.util.*;
 
 
 public interface IConexion {
-    
-    public List<Juego> seleccionar ();
+//    List<Juego>
+    public void seleccionar ();
     
     public void insertar(Juego juego);
     
