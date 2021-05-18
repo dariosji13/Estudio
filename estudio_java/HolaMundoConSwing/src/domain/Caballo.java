@@ -11,6 +11,12 @@ public class Caballo {
     public Caballo() {
     }
 
+    public Caballo(String nombreCaballo) {
+        this.nombreCaballo = nombreCaballo;
+    }
+    
+    
+
     public Caballo(String nombreCaballo, int IdCaballo) {
         this.nombreCaballo = nombreCaballo;
         this.IdCaballo = IdCaballo;
