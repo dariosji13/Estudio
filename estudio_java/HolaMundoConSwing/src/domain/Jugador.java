@@ -19,6 +19,12 @@ public class Jugador extends Persona{
         super(nombre);
     }
 
+    public Jugador(float dineroApostado, String nombre) {
+        super(nombre);
+        this.dineroApostado = dineroApostado;
+    }
+    
+
     public Jugador(float dineroApostado, Caballo caballo, String nombre) {
         super(nombre);
         this.dineroApostado = dineroApostado;
@@ -68,7 +74,10 @@ public class Jugador extends Persona{
     
   
       public  void actulizarDineroActual (){
-           this.dineroActual -= this.dineroApostado;
+          this.dineroActual -= this.dineroApostado;
+          if (this.dineroActual < 0){
+              this.dineroActual=0;
+          }
         
     }
     
